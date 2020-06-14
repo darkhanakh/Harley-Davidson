@@ -1,0 +1,92 @@
+.header
+  padding-top: 36px
+  height: 800px
+  width: 100%
+  background: #f4e2d6 url('../img/header-bg-1.jpg') no-repeat center / cover
+  &__nav
+    &-row
+      display: flex
+      justify-content: space-between
+      align-items: center
+      text-transform: uppercase
+      margin-bottom: 150px
+  &__button
+    height: 66px
+    padding-top: 23px
+    padding-left: 28px
+    padding-right: 28px
+    line-height: 1
+    background-color: $primary-blue
+
+    color: $classic-white
+    font-family: 'Teko', sans-serif
+    font-weight: 600
+    font-size: 23px
+    text-transform: uppercase
+    letter-spacing: 0.45px
+    text-decoration: none
+
+    transition: all 0.2s ease-in
+    &:hover 
+      background-color: darken($primary-blue, 20%)
+  &__nav
+    display: flex
+    color: #404040
+    font-family: "Teko", sans-serif
+    font-size: 23px
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.45px
+    &-link
+      position: relative
+      text-decoration: none
+      color: inherit
+      margin-right: 52px
+      transition: color 0.2s ease-in
+      &:last-child
+        margin-right: 0
+        &::after
+          display: none
+      &:hover
+        color: $primary-blue
+      &--active  
+        color: $primary-blue
+      &::after
+        position: absolute
+        content: ''
+        display: block
+        right: -28px
+        top: 10px
+        height: 6px
+        width: 6px
+        transform: rotate(45deg)
+        background-color: $primary-blue  
+  &__promo
+    max-width: 400px
+    &-button
+      display: inline-block
+      text-transform: uppercase
+      height: 61px
+      padding-left: 48px
+      padding-right: 48px
+      padding-top: 14px
+      border: 6px solid $classic-white
+      color: $classic-white
+      font-size: 18px
+      font-weight: 600
+      text-decoration: none
+      transition: border-color 0.2s ease-in, color 0.2s ease-in
+      &:hover
+        cursor: pointer
+        border-color: #ecad41
+        color: #ecad41
+  &__title
+    margin-bottom: 65px
+    color: $classic-white
+    font-family: 'Teko', sans-serif
+    font-size: 68px
+    font-weight: 700
+    line-height: 72px
+    letter-spacing: 2.73px
+        
+
