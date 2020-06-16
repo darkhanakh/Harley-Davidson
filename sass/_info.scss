@@ -1,0 +1,126 @@
+.info {
+  position: relative;
+  width: 420px;
+  height: 400px;
+  margin-right: 44px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--wide {
+    width: 890px;
+
+    .info__content {
+      &-title {
+        max-width: 400px;
+        position: absolute;
+        top: 100px;
+        left: 145px;
+        color: $classic-white;
+        font-family: $fontTeko;
+        font-size: 68px;
+        font-weight: 500;
+        line-height: 0.9;
+        text-transform: uppercase;
+        letter-spacing: 2.73px;
+
+        &--full {
+          max-width: 500px;
+        }
+      }
+
+      &-discount {
+        position: absolute;
+        right: 68px;
+        bottom: 73px;
+        max-width: 143px;
+        color: $classic-white;
+        font-family: $fontTeko;
+        font-size: 78px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+
+        &--small {
+          color: $classic-white;
+          font-family: $fontTeko;
+          font-size: 43px;
+          font-weight: 500;
+          line-height: 1;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &--medium {
+    width: 530px;
+  }
+
+  &--large {
+    width: 780px;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary-blue, 0.75);
+    transition: opacity 0.2s ease-in;
+
+    &-title {
+      max-width: 300px;
+      position: absolute;
+      top: 50px;
+      left: 45px;
+      color: $classic-white;
+      font-family: $fontTeko;
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 2.73px;
+    }
+
+    &-discount {
+      position: absolute;
+      right: 30px;
+      bottom: 33px;
+      max-width: 143px;
+      color: $classic-white;
+      font-family: $fontTeko;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 0.9;
+      text-transform: uppercase;
+
+      &--small {
+        color: $classic-white;
+        font-family: $fontTeko;
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

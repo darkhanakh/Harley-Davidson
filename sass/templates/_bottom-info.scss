@@ -1,0 +1,9 @@
+.bottom-info {
+  padding-top: 65px;
+  padding-bottom: 44px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

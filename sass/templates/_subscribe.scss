@@ -1,0 +1,73 @@
+.subscribe {
+  height: 550px;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary-blue, 0.75);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+  }
+
+  &__title {
+    color: $classic-white;
+    font-family: $fontTeko;
+    font-size: 97px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 85px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    background-color: $classic-white;
+    padding-left: 44px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    flex-grow: 2;
+    height: 62px;
+    font-family: $fontMons;
+    color: #707070;
+    font-size: 19px;
+    border: none;
+  }
+
+  &__button {
+    width: 180px;
+    height: 62px;
+    background-color: $primary-blue;
+    border: none;
+    color: $classic-white;
+    font-family: $fontTeko;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+      background-color: darken($primary-blue, 10%);
+    }
+  }
+}
