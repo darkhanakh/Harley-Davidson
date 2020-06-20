@@ -1,9 +1,19 @@
 .bottom-info {
   padding-top: 65px;
-  padding-bottom: 44px;
+  padding-bottom: 30px;
+
+
+  @media (min-width: 992px) {
+    padding-bottom: 44px;
+  }
 
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 740px) {
+      flex-direction: row;
+    }
   }
 }

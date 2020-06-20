@@ -1,42 +1,61 @@
 .header
   padding-top: 36px
-  height: 800px
+  height: 530px
   width: 100%
   background: #f4e2d6 url('../img/header-bg-1.jpg') center / cover
+
+
+
+  @media screen and ( min-width: 980px ) 
+    height: 800px
+    
   &__nav
     &-row
       display: flex
       justify-content: space-between
-      align-items: center
+      align-items: flex-start
       text-transform: uppercase
-      margin-bottom: 150px
+      margin-bottom: 70px
+
+      @media screen and ( min-width: 980px )
+        align-items: center
+        margin-bottom: 150px
   &__button
-    height: 66px
-    padding-top: 23px
-    padding-left: 28px
-    padding-right: 28px
-    line-height: 1
-    background-color: $primary-blue
+    display: none
+  &-button
+    @media screen and ( min-width: 980px )
+      display: none
 
-    color: $classic-white
-    font-family: 'Teko', sans-serif
-    font-weight: 600
-    font-size: 23px
-    text-transform: uppercase
-    letter-spacing: 0.45px
-    text-decoration: none
+    @media screen and ( min-width: 980px )
+      display: block
+      height: 66px
+      padding-top: 23px
+      padding-left: 28px
+      padding-right: 28px
+      line-height: 1
+      background-color: $primary-blue
 
-    transition: all 0.2s ease-in
+      color: $classic-white
+      font-family: 'Teko', sans-serif
+      font-weight: 600
+      font-size: 23px
+      text-transform: uppercase
+      letter-spacing: 0.45px
+      text-decoration: none
+
+      transition: all 0.2s ease-in
     &:hover 
       background-color: darken($primary-blue, 20%)
   &__nav
-    display: flex
-    color: #404040
-    font-family: "Teko", sans-serif
-    font-size: 23px
-    font-weight: 600
-    text-transform: uppercase
-    letter-spacing: 0.45px
+    display: none
+    @media screen and ( min-width: 980px )
+      display: flex
+      color: #404040
+      font-family: "Teko", sans-serif
+      font-size: 23px
+      font-weight: 600
+      text-transform: uppercase
+      letter-spacing: 0.45px
     &-link
       position: relative
       text-decoration: none
@@ -82,12 +101,15 @@
         border-color: #ecad41
         color: #ecad41
   &__title
+    font-size: 44px
     margin-bottom: 65px
     color: $classic-white
     font-family: 'Teko', sans-serif
-    font-size: 68px
     font-weight: 700
-    line-height: 72px
+    line-height: 1.05
     letter-spacing: 2.73px
-        
+    @media screen and ( min-width: 480px )
+      font-size: 54px
+    @media screen and ( min-width: 980px )
+      font-size: 68px
 

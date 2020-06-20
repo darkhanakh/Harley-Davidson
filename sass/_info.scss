@@ -1,29 +1,67 @@
 .info {
   position: relative;
-  width: 420px;
-  height: 400px;
-  margin-right: 44px;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 44px;
+
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 740px) {
+    width: 37%;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 1350px) {
+    width: 420px;
+    margin-right: 44px;
+  }
 
   &:last-child {
     margin-right: 0;
   }
 
   &--wide {
-    width: 890px;
+    width: 100%;
+
+    @media screen and (min-width: 740px) {
+      width: 61%;
+    }
+
+    @media screen and (min-width: 1350px) {
+      width: 890px;
+    }
 
     .info__content {
       &-title {
-        max-width: 400px;
-        position: absolute;
-        top: 100px;
-        left: 145px;
+
         color: $classic-white;
         font-family: $fontTeko;
-        font-size: 68px;
+        font-size: 48px;
         font-weight: 500;
         line-height: 0.9;
         text-transform: uppercase;
         letter-spacing: 2.73px;
+
+        @media screen and (min-width: 480px) {
+          font-size: 68px;
+        }
+
+
+        @media screen and (min-width: 740px) {
+          position: absolute;
+          top: 40px;
+          left: 45px;
+        }
+
+        @media screen and (min-width: 1105px) {
+          top: 100px;
+          left: 145px;
+          width: 400px;
+        }
 
         &--full {
           max-width: 500px;
@@ -31,16 +69,28 @@
       }
 
       &-discount {
-        position: absolute;
-        right: 68px;
-        bottom: 73px;
-        max-width: 143px;
         color: $classic-white;
         font-family: $fontTeko;
-        font-size: 78px;
+        font-size: 45px;
         font-weight: 700;
         line-height: 1;
         text-transform: uppercase;
+
+        @media screen and (min-width: 480px) {
+          font-size: 78px;
+        }
+
+        @media screen and (min-width: 740px) {
+          position: absolute;
+          right: 30px;
+          bottom: 20px;
+          max-width: 143px;
+        }
+
+        @media screen and (min-width: 1100px) {
+          right: 68px;
+          bottom: 73px;
+        }
 
         &--small {
           color: $classic-white;
@@ -55,11 +105,28 @@
   }
 
   &--medium {
-    width: 530px;
+    width: 100%;
+
+    @media screen and (min-width: 740px) {
+      width: 38%;
+    }
+
+    @media screen and (min-width: 1350px) {
+      width: 530px;
+    }
   }
 
   &--large {
-    width: 780px;
+
+    width: 100%;
+
+    @media screen and (min-width: 740px) {
+      width: 60%;
+    }
+
+    @media screen and (min-width: 1350px) {
+      width: 780px;
+    }
   }
 
   &__img {
@@ -74,7 +141,7 @@
 
   &__content {
     display: block;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     left: 0;
     top: 0;
@@ -83,11 +150,22 @@
     background-color: rgba($primary-blue, 0.75);
     transition: opacity 0.2s ease-in;
 
+    padding: 30px;
+
+    @media (min-width: 992px) {
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+
+    @media screen and (min-width: 740px) {
+      padding: 0;
+    }
+
     &-title {
-      max-width: 300px;
-      position: absolute;
-      top: 50px;
-      left: 45px;
       color: $classic-white;
       font-family: $fontTeko;
       font-size: 38px;
@@ -95,19 +173,42 @@
       line-height: 0.9;
       text-transform: uppercase;
       letter-spacing: 2.73px;
+      display: block;
+      margin-bottom: 50px;
+
+      @media (min-width: 480px) {
+        font-size: 42px;
+      }
+
+      @media screen and (min-width: 740px) {
+        position: absolute;
+        top: 50px;
+        left: 45px;
+      }
+
+      @media screen and (min-width: 980px) {
+        width: 300px;
+      }
     }
 
     &-discount {
-      position: absolute;
-      right: 30px;
-      bottom: 33px;
       max-width: 143px;
       color: $classic-white;
       font-family: $fontTeko;
-      font-size: 60px;
+      font-size: 40px;
       font-weight: 700;
       line-height: 0.9;
       text-transform: uppercase;
+
+      @media screen and (min-width: 480px) {
+        font-size: 60px;
+      }
+
+      @media screen and (min-width: 740px) {
+        position: absolute;
+        right: 30px;
+        bottom: 33px;
+      }
 
       &--small {
         color: $classic-white;
@@ -119,8 +220,5 @@
       }
     }
 
-    &:hover {
-      opacity: 1;
-    }
   }
 }

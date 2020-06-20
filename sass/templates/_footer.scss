@@ -1,17 +1,62 @@
 .footer {
-  padding-top: 120px;
+  padding-top: 40px;
+
+  @media (min-width: 640px) {
+    padding-top: 80px;
+  }
+
+
+  @media (min-width: 992px) {
+    padding-top: 120px;
+  }
 
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__column {
-    max-width: 250px;
+    width: 100%;
+    margin-bottom: 40px;
+
+
+
+    @media (min-width: 640px) {
+      width: 50%;
+      margin-bottom: 60px;
+
+      &:nth-child(odd) {
+        padding-right: 30px;
+      }
+
+      &:nth-child(even) {
+        padding-left: 30px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      width: auto;
+      max-width: 250px;
+      padding: 0;
+      margin-bottom: 60px;
+
+      &:nth-child(odd) {
+        padding-right: 0px;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0px;
+      }
+    }
   }
 
   &__group {
     margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -45,7 +90,19 @@
 
   &__cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    img:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: 992px) {
+      justify-content: space-between;
+
+      img {
+        margin-right: 0;
+      }
+    }
   }
 
   &__logo {

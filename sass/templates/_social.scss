@@ -1,10 +1,14 @@
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 
+  @media (min-width: 992px) {
+    justify-content: space-between;
+  }
 
   &__item {
+    margin-right: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,5 +19,14 @@
     border-radius: 50%;
     text-decoration: none;
     color: $classic-white;
+    flex-shrink: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (min-width: 992px) {
+      margin-right: 0;
+    }
   }
 }

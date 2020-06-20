@@ -52,3 +52,4 @@ try {
 } catch (Exception $e) {
     echo "Сообщение не отправлено. Код ошибки: {$mail->ErrorInfo}";
 }
+

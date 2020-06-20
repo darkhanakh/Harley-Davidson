@@ -1,35 +1,59 @@
 .section-service
-  padding-top: 104px
-  padding-bottom: 104px
+  padding: 50px 0
+  @media screen and ( min-width: 768px )
+    padding-top: 104px
+    padding-bottom: 104px
   &__row
     display: flex
     justify-content: space-between
-    align-items: center
+    flex-wrap: wrap
+
+    @media screen and ( min-width: 992px )
+      flex-wrap: nowrap 
+      
 .service-block
-  margin-right: 22px
-  width: 33%
+  width: 100%
   color: #000000
-  border: 3px solid #707070;
-  background-color: $classic-white;
-  padding: 35px 30px
+  border: 3px solid #707070
+  background-color: $classic-white
+  padding: 35px 15px
   display: flex
-  justify-content: space-between
+  max-height: 230px
+  margin-bottom: 15px
+  @media screen and ( min-width: 440px )
+    padding: 35px 30px  
+  @media screen and ( min-width: 680px )
+    width: 49%
+    margin-bottom: 20px
+    &:last-child
+      width: 100%
+      margin-bottom: 0
+  @media screen and ( min-width: 992px )
+    margin-bottom: 0
+    width: 32%
+    margin-right: 22px
+    &:last-child
+      width: 32%
+      margin-rigth: 0
+    
   &__description
-    width: 150px
+    //width: 150px
   &__title
-    color: #262626;
+    color: #262626
     font-family: $fontMons
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.44;
+    font-size: 13px
+    font-weight: 700
+    line-height: 1.44
     margin-bottom: 10px
     min-height: 37px
   &__text
-    color: #707070;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 1.5;
+    color: #707070
+    font-size: 11px
+    font-weight: 400
+    line-height: 1.5
   &:last-child
     margin-right: 0
   &__img
-    margin-right: 30px  
+    margin-right: 20px
+    @media screen and ( min-width: 440px )
+      margin-right: 35px

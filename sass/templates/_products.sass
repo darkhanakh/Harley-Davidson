@@ -1,5 +1,7 @@
 .products
-  padding-top: 61px
+  padding-top: 30px
+  @media screen and ( min-width: 992px )
+    padding-top: 61px
   &__title
     color: #f1f1f1
     font-family: $fontTeko
@@ -7,21 +9,27 @@
     font-weight: 700
     line-height: 1.32
     text-transform: uppercase
-    margin-bottom: 45px
+    margin-bottom: 25px
     text-align: center
+
+    @media screen and ( min-width: 768px )
+      margin-bottom: 45px
+      
   &__filter
     display: flex
+    flex-direction: column
     justify-content: center
     border-bottom: 1px solid #b2b2b2
-    padding-bottom: 45px
-    margin-bottom: 75px
+    margin-bottom: 35px
+    padding-bottom: 20px
     &-item
+      padding: 15px 0
+      text-align: center
       text-decoration: none
       color: #f1f1f1
       font-size: 21px
       font-weight: 600
       line-height: 1.3
-      margin-right: 45px
       transition: color 0.2s ease-in
       &:last-child
         margin-right: 0
@@ -29,31 +37,53 @@
         color: #0077ff
       &:hover
         color: #0077ff
+      @media screen and ( min-width: 768px )
+        margin-right: 45px
+        text-align-last: left
+        padding: 0
+    @media screen and ( min-width: 768px )
+      flex-direction: row
+      margin-bottom: 75px
+      padding-bottom: 45px
   &__row
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    flex-direction: column
+
+    @media screen and ( min-width: 768px )
+      flex-direction: row
+      
 .product      
   &-card
+    width: 100%
     background-color: #fff
-    width: 30%  
     text-align: center
     padding: 0 15px 25px 15px
     margin-bottom: 60px
+
+    @media screen and ( min-width: 768px )
+      width: 30%
+      
     &__img
       height: 380px
       display: flex
       justify-content: center
       align-items: center
+      img
+        max-width: 100%
     &__title
       color: #262626
-      font-size: 21px
+      font-size: 15px
       font-weight: 600
       line-height: 1.1px
       height: 70px
       display: flex
       justify-content: center
       align-items: center
+      @media screen and ( max-width: 768px )
+        font-size: 21px
+        
     &__price
       color: $primary-blue
       font-size: 30px
