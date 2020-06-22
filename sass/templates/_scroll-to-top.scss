@@ -1,0 +1,17 @@
+.scroll-to-top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  width: 46px;
+  height: 46px;
+  z-index: 99;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+
+  @media (min-width: 920px) {
+    right: 100px;
+    bottom: 100px;
+  }
+}

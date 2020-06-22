@@ -1,0 +1,61 @@
+.slide {
+  display: flex;
+  align-items: center;
+  /*   
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; */
+  height: 100%;
+
+  height: 454px;
+
+
+  @media screen and (min-width: 980px) {
+    height: 800px;
+  }
+
+
+  .container {
+    flex-grow: 2;
+  }
+}
+
+
+// контейнер для точек пагинации 
+.header .owl-carousel .owl-dots {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+
+  @media (min-width: 778px) {
+    right: 115px;
+  }
+}
+
+
+// Точка в пагинации 
+.header .owl-carousel .owl-dots .owl-dot span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  border: 4.5px solid #404040;
+  outline: none;
+  margin-bottom: 23px;
+}
+
+// Активная точка в пагинации 
+.header .owl-carousel .owl-dots .owl-dot.active span {
+  width: 20px;
+  height: 20px;
+  border: 4.5px solid $primary-blue;
+  outline: none;
+  display: block;
+  border-radius: 50%;
+  background-color: #fff;
+}
